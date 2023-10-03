@@ -1,0 +1,35 @@
+appId: ${APP_ID}
+---
+- runScript: ../../constants/common/login.js
+- tapOn:
+    text: ${output.login.emailInput}
+    retryTapIfNoChange: false
+- inputText: ${output.login.email}
+- tapOn:
+    text: ${output.login.passwordInput}
+    retryTapIfNoChange: false
+- inputText: ${output.login.password}
+- extendedWaitUntil:
+    visible:
+      point: ${output.login.nextStepBtn}
+    timeout: 100000
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_01
+- tapOn:
+    point: ${output.login.nextStepBtn}
+    retryTapIfNoChange: false
+
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_02
+
+- tapOn:
+    id: ${output.login.loginBtn}
+    retryTapIfNoChange: false

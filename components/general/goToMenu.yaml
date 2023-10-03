@@ -1,0 +1,10 @@
+appId: ${APP_ID}
+---
+- tapOn:
+    id: ${output.sidebar.drawerBtn}
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_01

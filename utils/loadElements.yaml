@@ -1,0 +1,4 @@
+appId: ${APP_ID}
+---
+- runScript: ../constants/common/sidebar.js
+- runScript: ../constants/common/login.js

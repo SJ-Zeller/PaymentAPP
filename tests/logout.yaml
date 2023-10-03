@@ -1,0 +1,14 @@
+appId: ${APP_ID}
+onFlowStart:
+  - runFlow: ../components/general/launchApp.yaml
+  - runFlow:
+      file: ../components/general/loginUser.yaml
+      env:
+        TAKE_SCREENSHOTS: false
+---
+- runScript: ../constants/common/logout.js
+- runFlow:
+    file: ../components/general/logoutUser.yaml
+    env:
+      SCREENSHOT_PREFIX: .maestro/screenshots/logoutUser
+      TAKE_SCREENSHOTS: true

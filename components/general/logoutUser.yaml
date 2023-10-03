@@ -1,0 +1,15 @@
+appId: ${APP_ID}
+env:
+  MENU_OPTION: Settings
+---
+- runScript: ../../constants/common/logout.js
+- runFlow: ../../utils/loadElements.yaml
+
+
+- assertVisible:
+    id: ${output.logout.appItem}
+- tapOn:
+    id: ${output.logout.appItem}
+- assertVisible: ${output.logout.signOutBtn}
+- tapOn:
+    text: ${output.logout.signOutBtn}

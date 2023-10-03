@@ -1,0 +1,10 @@
+appId: ${APP_ID}
+env:
+  REFERENCE: Limit
+onFlowStart:
+  - runFlow: ../components/general/launchApp.yaml
+---
+  - runFlow:
+      file: ../components/general/loginUser.yaml
+      env:
+        TAKE_SCREENSHOTS: false

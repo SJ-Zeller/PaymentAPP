@@ -1,0 +1,136 @@
+appId: ${APP_ID}
+env:
+  MENU_OPTION: SiteSettings
+---
+- runScript: ../../constants/Sitesettings/Tipping.js
+- runFlow: ../../utils/loadElements.yaml
+- runFlow: ../general/goToMenu.yaml
+
+- tapOn:
+    text: ${output.tipping.settingsbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_12
+
+- tapOn:
+    text: ${output.tipping.sitebtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_13
+- tapOn:
+    id: ${output.tipping.tippingbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_14
+- tapOn:
+    id: ${output.tipping.toggletipbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_15
+- tapOn:
+    id: ${output.tipping.togglecustomtipbtn}
+    index: 1
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_16
+- tapOn:
+    id: ${output.tipping.backbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_17
+- tapOn:
+    id: ${output.tipping.settingsbackbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_18
+- tapOn:
+    id: ${output.tipping.drawerBtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_19
+- tapOn:
+    text: ${output.tipping.takepaymentbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_20
+- tapOn:
+    text: ${output.tipping.numberbtn1}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_21
+- tapOn:
+    text: ${output.tipping.numberbtn2}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_22
+- tapOn:
+    text: ${output.tipping.numberbtn3}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_23
+- tapOn:
+    text: ${output.tipping.chargebtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_24
+- tapOn:
+    id: ${output.tipping.back_btn2}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_25

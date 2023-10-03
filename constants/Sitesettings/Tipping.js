@@ -1,0 +1,16 @@
+output.tipping = {
+    settingsbtn: 'Settings',
+    sitebtn: 'Site settings',
+    tippingbtn: 'com.zeller.paymentapp.mock.fake.debug:id/tippingRow',
+    toggletipbtn: 'com.zeller.paymentapp.mock.fake.debug:id/switchToggle',
+    togglecustomtipbtn: 'com.zeller.paymentapp.mock.fake.debug:id/switchToggle',
+    backbtn: 'com.zeller.paymentapp.mock.fake.debug:id/navigationButton',
+    settingsbackbtn: 'com.zeller.paymentapp.mock.fake.debug:id/navigationButton',
+    drawerBtn: 'com.zeller.paymentapp.mock.fake.debug:id/navigationButton',
+    takepaymentbtn: 'Take Payment',
+    numberbtn1: '2',
+    numberbtn2: '3',
+    numberbtn3: '7',
+    chargebtn: 'Charge',
+    back_btn2: 'com.zeller.paymentapp.mock.fake.debug:id/navigationButton',
+    };

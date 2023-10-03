@@ -1,0 +1,16 @@
+appId: ${APP_ID}
+env:
+  REFERENCE: Test
+onFlowStart:
+  - runFlow: ../components/general/launchApp.yaml
+  - runFlow:
+      file: ../components/general/loginUser.yaml
+      env:
+        TAKE_SCREENSHOTS: false
+---
+- runScript: ../constants/Sitesettings/splitpayments.js
+- runFlow:
+    file: ../components/Sitesettings/split_payments.yaml
+    env:
+      SCREENSHOT_PREFIX: .maestro/screenshots/split_payments_flow
+      TAKE_SCREENSHOTS: true

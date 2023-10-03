@@ -1,0 +1,56 @@
+appId: ${APP_ID}
+env:
+  MENU_OPTION: SiteSettings
+---
+- runScript: ../../constants/Sitesettings/splitpayments.js
+- runFlow: ../../utils/loadElements.yaml
+- runFlow: ../general/goToMenu.yaml
+
+- tapOn:
+    text: ${output.splitpayments.settingsbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_04
+
+- tapOn:
+    text: ${output.splitpayments.sitebtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_05
+- tapOn:
+    id: ${output.splitpayments.splitpaymetnsbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_06
+- tapOn:
+    id: ${output.splitpayments.togglesplitbtton}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_07
+- tapOn:
+    id: ${output.splitpayments.backbtn}
+    retryTapIfNoChange: false
+- runFlow:
+    when:
+      true: ${TAKE_SCREENSHOTS == "true"}
+    file: ../../utils/takeScreenshot.yaml
+    env:
+      SCREENSHOT_NAME: ${SCREENSHOT_PREFIX}_08
+
+
